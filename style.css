@@ -14,10 +14,16 @@ body {
 	display: flex; justify-content: center;
 }
 
-main {
+.inner-container {
 	max-width: 1920px;
 	display: grid;
-	grid-template-columns: 1fr 4fr 2fr;
+	grid-template-columns: 200px 1fr 200px;
+}
+
+main {
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: repeat(12, 1fr);
 }
 
 h2 {
@@ -40,14 +46,25 @@ img {
 	width: 100%;
 }
 
+.flex-row {
+	display: flex; align-items: center;
+}
+
 .main-content {
-	border-right: 2px solid #979797;
 	max-width: 1240px;
-	padding-right: 50px;
+	grid-column-start: 1; grid-column-end: 9;
+	display: grid; grid-template-columns: repeat(16 , 1fr);
+}
+
+.vertical-line {
+	grid-column-start: 9; grid-column-end: 10;
+	margin: 0 auto;
+	border-left: 2px solid #979797;
 }
 
 .main-content-main-figure {
 	margin: 0 0 30px 0;
+	grid-column-start: 1; grid-column-end: 17;
 }
 
 .main-content-main-image {
@@ -58,10 +75,17 @@ figcaption {
 	font-size: 16px;
 }
 
+.main-article-grid {
+	grid-column-start: 3; grid-column-end: 15;
+}
+
+.secondary-article-grid {
+	grid-column-start: 1; grid-column-end: 17;
+}
+
 .article-content {
 	font-size: 20px;
 	line-height: 32px;
-	margin: 0 100px;
 }
 
 .main-article {
@@ -87,8 +111,8 @@ figcaption {
 }
 
 .two-images-container {
+	grid-column-start: 1; grid-column-end: 17;
 	display: flex;
-	margin: 0 -100px;
 }
 
 .two-images-container figure {
@@ -105,7 +129,6 @@ figcaption {
 .unsere-neuen-streuar-img-container {
 	display: flex;
 	justify-content: space-around;
-	margin: 0 -100px 50px -100px;
 }
 
 .unsere-neuen-streuar-img-container img {
@@ -119,7 +142,7 @@ figcaption {
 	flex-direction: column;
 	font-size: 16px;
 	line-height: 20px;
-	margin: 50px -100px;
+	margin: 100px 0;
 }
 
 .article-tags {
@@ -185,7 +208,7 @@ figcaption {
 .you-might-also-like-container {
 	font-size: 16px;
 	line-height: 20px;
-	margin: 100px -100px;
+	margin: 100px 0;
 }
 
 .you-might-also-like-container img {
@@ -286,9 +309,7 @@ figcaption {
 
 
 .header-container {
-	grid-column-start: 2; grid-column-end: 4;
-	font-weight: 600;
-	margin: 0 0 30px 100px;
+	grid-column-start: 2; grid-column-end: 8;
 }
 
 .header-container svg {
@@ -316,24 +337,31 @@ svg.breadcrumbs-arrow {
 }
 
 .main-header {
-	font-size: 40px;
+	font-size: 48px;
+	font-weight: 600;
+	line-height: 60px;
 	margin-bottom: 40px;
 }
 
-.article-top-info-item {
+
+.article-top-info {
+	margin-bottom: 50px;
+}
+
+.article-top-info img,
+.article-top-info svg {
+	margin-right: 5px;
+}
+
+.article-top-info-text {
 	margin-right: 15px;
 }
 
-.article-top-info * {
-	display: inline;
-}
-
 .article-top-info img {
-	height: 21px;
+	height: 20px;
 	border-radius: 100%;
 	object-fit: cover;
-	vertical-align: -5px;
-	width: 21px;
+	width: 20px;
 }
 
 .article-date-container,
@@ -341,13 +369,12 @@ svg.breadcrumbs-arrow {
 	font-weight: normal;
 }
 
-.article-top-info-item {
-}
 
 .social-media-links-container {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
+	padding-top: 250px;
 }
 
 .social-media-links-container > div {
@@ -402,8 +429,8 @@ svg.breadcrumbs-arrow {
 }
 
 .aside {
-	padding: 0 100px 0 50px;
 	text-align: center;
+	grid-column-start: 10; grid-column-end: 13;
 }
 
 .aside-header {
@@ -686,22 +713,27 @@ svg.breadcrumbs-arrow {
 	text-align: center;
 }
 
-.comment-section {
+.comment-section-outer-container {
 	background-color: #EEEEEE;
 	margin-top: 100px;
 	grid-column-start: 1; grid-column-end: 4;
 	display: grid;
-	grid-template-columns: 1fr 4fr 2fr;
+	grid-template-columns: 200px auto 200px;
+}
+
+.comment-section-inner-container {
+	grid-column-start: 2; grid-column-end: 3;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
 }
 
 .comment-section-main {
-	grid-column-start: 2; grid-column-end: 3;
-	padding: 50px;
+	grid-column-start: 2; grid-column-end: 8;
+	padding: 50px 0;
 }
 
 .comments-header-container {
 	display: flex; align-items: center;
-	margin-left: 100px; 
 }
 
 .comments-header {
@@ -722,7 +754,7 @@ svg.breadcrumbs-arrow {
 
 .single-comment {
 	border-bottom: 1px solid #CCCCCC;
-	padding: 50px 100px;
+	padding: 50px 0;
 }
 
 .single-comment svg {
@@ -776,7 +808,6 @@ svg.breadcrumbs-arrow {
 
 .comment-input-form {
 	display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 20px;
-	margin: 0 100px;
 }
 
 .comment-input-form input,
@@ -843,14 +874,6 @@ svg.breadcrumbs-arrow {
 
 	.article-top-info img {
 		width: 40px; height: 40px;
-	}
-
-	.article-top-info {
-		display: flex; align-items: center;
-	}
-
-	.article-top-info > div {
-		display: flex; align-items: center;
 	}
 
 	.social-media-links-container {
