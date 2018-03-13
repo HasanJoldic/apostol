@@ -713,8 +713,9 @@ svg.breadcrumbs-arrow {
 }
 
 .unsere-kunden-images {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5px;
 }
 
 .unsere-kunden-images img {
