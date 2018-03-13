@@ -175,8 +175,9 @@ figcaption {
 }
 
 .unsere-neuen-streuar-img-container {
-	display: flex;
-	justify-content: space-around;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-column-gap: 5px;
 }
 
 .unsere-neuen-streuar-img-container img {
