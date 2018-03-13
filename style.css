@@ -687,13 +687,14 @@ svg.breadcrumbs-arrow {
 
 .aside-social-links-container {
 	background-color: #EEEEEE;
-	display: flex; align-items: center; justify-content: center;
-	padding: 10px 0;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-column-gap: 5px;
+	padding: 10px 5px;
 }
 
 .aside-social-links-container img {
-	border-radius: 100%;
-	margin: 10px;
+	border-radius: 50%;
 }
 
 .unsere-kunden-header {
