@@ -1,3 +1,47 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -126,6 +170,10 @@ figcaption {
 .strassburger-jahre-header {	
 }
 
+.unsere-neuen-streuar-header {
+	font-size: 32px; line-height: 32px;
+}
+
 .unsere-neuen-streuar-img-container {
 	display: flex;
 	justify-content: space-around;
@@ -170,6 +218,11 @@ figcaption {
 }
 
 .about-author-text {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	height: 100%;
+	justify-content: space-around;
 }
 
 .about-author-name {
@@ -211,6 +264,20 @@ figcaption {
 	margin: 100px 0;
 }
 
+.you-might-also-like-items {
+	display: grid; 
+	grid-template-columns: 1fr 1fr; 
+	grid-template-rows: auto;
+	grid-column-gap: 20px;
+}
+
+.you-might-also-like-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+
 .you-might-also-like-container img {
 	width: 100%;
 }
@@ -238,7 +305,6 @@ figcaption {
 }
 
 .you-might-also-like-links-container > div hr {
-	margin-top: -2px;
 	position: absolute;
 	top: 50%;
 	width: 100%;
@@ -282,6 +348,25 @@ figcaption {
 	height: 40px;
 	object-fit: cover;
 	width: 40px;
+}
+
+.you-might-also-like-article-lesen-container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.you-might-also-like-article-lesen-container hr {
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+}
+
+.you-might-also-like-article-lesen-container span {
+	background: #FFCC01;
+	padding: 2px 10px;
+	border-radius: 12px;
 }
 
 .article-duration-and-comment-count {
@@ -515,18 +600,24 @@ svg.breadcrumbs-arrow {
 	border-radius: 4px;
 }
 
+.die-beliebtesten-artikel-desc {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	justify-content: space-between;
+}
+
 .die-beliebtesten-artikel-text {
 	color: #292929;
 	font-size: 20px;
 	font-weight: 600;
 	line-height: 24px;
-	margin-bottom: 20px;
 }
 
 .die-beliebtesten-artikel-item .die-beliebtesten-artikel-read-more span {
 	background-color: #FFCC01;
 	border-radius: 12px;
-	padding: 2px 10px;
+	padding: 0 10px;
 }
 
 .osterreichs-nr-1 {
@@ -851,25 +942,73 @@ svg.breadcrumbs-arrow {
 .comment-input-form textarea {
 	background-image: url(./images/svg/comment.svg);
 }
+figcaption: {
+	font-size: 14px;
+}
+
+.about-author-img-container img {
+	width: 160px; height: 160px;
+}
+
+.about-author-img-container {
+
+}
+
+.article-duration-and-comment-count div {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
 
 @media only screen and (max-width: 1024px) {
+	body {
+		font-size: 14px;
+		line-height: 18px;
+	}
+
+	figcaption {
+		font-size: unset;
+	}
+
 	.no-mobile {
 		display: none;
 	}
-	.outer-container {
+
+	.aside {
+		display: none;
+	}
+
+	.outer-container,
+	.inner-container,
+	main,
+	.main-content,
+	.comment-section-outer-container,
+	.comment-section-inner-container,
+	.comment-input-form {
 		display: unset;
 	}
 
-	main {
-		display: unset;
-	}
-
-	.header-container {
-		margin: 0;
+	.mobile-narrow {
+		margin-left: 15px; margin-right: 15px;
 	}
 
 	.main-header {
 		font-size: 32px; line-height: 32px;
+	}
+
+	.article-top-info {
+		justify-content: space-between;
+	}
+
+	.article-top-info > div:nth-child(1) > div {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.article-top-info > div:nth-child(2) {
+		flex-direction: column;
+		align-items: flex-end;
 	}
 
 	.article-top-info img {
@@ -879,4 +1018,109 @@ svg.breadcrumbs-arrow {
 	.social-media-links-container {
 		display: none;
 	}
+
+	.article-content {
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+	.unsere-neuen-streuar-header {
+		font-size: 20px;
+		line-height: 32px;
+	}
+
+	.main-article-quote-text {
+		margin: 0;
+	}
+
+	.article-tags {
+    	border-radius: 4px;
+	}
+
+	.main-article-grid {
+		font-size: 18px; line-height: 24px;
+	}
+
+	.secondary-article-grid {
+		font-size: 14px; line-height: 20px;
+	}
+
+	.main-article-quote {
+	    font-size: 24px; line-height: 32px;
+	    hyphens: auto;
+	}
+
+	.main-article-quote-marks {
+	    font-size: 80px;
+	}
+
+	.two-images-container {
+	    display: grid;
+	    grid-template-columns: 1fr 1fr;
+	    grid-column-gap: 10px;
+	}
+
+	.two-images-container figure {
+		margin: 30px 0;
+	}
+
+	.two-images-container figcaption {
+		font-size: 12px; line-height: 15px;
+	}
+
+	.about-author .article-tags span {
+		display: flex; align-items: center;
+	}
+
+	.about-author-main {
+	    display: grid;
+	    padding: 30px 0;
+	    grid-template-columns: 1fr 3fr;
+	    grid-column-gap: 10px;
+	}
+
+	.you-might-also-like-items {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.you-might-also-like-item {
+		margin-bottom: 50px;
+	}
+
+	.comment-section-main {
+		background-color: #EEE;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.comment-input-form {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-column-gap: 0;
+		grid-row-gap: 10px;
+	}
+
+	.comment-input-form > * {
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+
+	.about-author-img-container {
+		align-self: flex-start;
+	}
+
+	.about-author-img-container img {
+		width: 80px; height: 80px;
+		margin-right: 0;
+	}
+
+	.about-author-text {
+		justify-content: space-between;
+	}
+
+	.about-author-name {
+		margin: 0 0 10px 0;
+	}
+
 }
