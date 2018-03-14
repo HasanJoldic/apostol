@@ -1,5 +1,6 @@
 $break-phone-1: 340px;
 $break-phone-2: 380px;
+$break-desktop-1: 1024px;
 
 $yellow: #FFCC01;
 $red: #D8232A;
@@ -393,4 +394,6 @@ figcaption {
 		font-weight: 600;
 	}
 }
-
+@media screen and (min-width: $break-desktop-1) {
+	
+}
