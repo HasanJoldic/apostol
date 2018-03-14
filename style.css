@@ -772,8 +772,12 @@ img {max-width:100%;}
 	display: flex;
 }
 
+.aside-instagram-images > div > div {
+	margin: 4px 2px 0 2px;
+}
+
 .aside-instagram-images img {
-	margin: 2px 2px 0 2px;
+	width: 100%; height: 100%;
 	flex: auto;
 }
 
@@ -948,10 +952,14 @@ figcaption: {
 
 .about-author-img-container img {
 	width: 160px; height: 160px;
+	position: absolute;
+	top: 0; left: 0;
 }
 
 .about-author-img-container {
-
+	padding: 80px;
+    position: relative;
+    margin-right: 20px;
 }
 
 .article-duration-and-comment-count div {
