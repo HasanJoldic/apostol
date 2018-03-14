@@ -1,3 +1,7 @@
+input, textarea {
+	box-sizing: border-box;
+}
+
 body {
     color: #292929;
     font-family: "Source Sans Pro", sans-serif;
@@ -58,8 +62,7 @@ img {
 }
 
 .vertical-line {
-	flex: 1;
-	margin: 0 auto;
+	margin: 0 50px;
 	border-left: 2px solid #979797;
 }
 
@@ -222,11 +225,22 @@ figcaption {
 }
 
 .you-might-also-like-item {
+	position: relative;
 	width: 49%;
 }
 
 
+.you-might-also-like-item > div:first-child {
+	margin-bottom: 150px;
+}
+
 .you-might-also-like-container img {
+	width: 100%;
+}
+
+.you-might-also-like-bottom-container {
+	position: absolute;
+	bottom: 0;
 	width: 100%;
 }
 
@@ -286,8 +300,15 @@ figcaption {
 }
 
 .you-might-also-like-author-container {
-	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
 	
+	
+}
+
+.you-might-also-like-author-container > div:first-child {
+	display: flex;
 	
 }
 
@@ -296,13 +317,12 @@ figcaption {
 	height: 40px;
 	object-fit: cover;
 	width: 40px;
+	margin-right: 20px;
 }
 
 .you-might-also-like-article-lesen-container {
 	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	text-align: center;
 }
 
 .you-might-also-like-article-lesen-container hr {
@@ -863,7 +883,22 @@ img {max-width:100%;}
 }
 
 .comment-input-form {
-	 
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.comment-input-form  > input {
+	width: 49%;
+}
+
+.comment-input-form  > textarea,
+.comment-input-form  > .submit-comment {
+	width: 100%;
+}
+
+.comment-input-form  > textarea {
+	width: 100%;
 }
 
 .comment-input-form input,
