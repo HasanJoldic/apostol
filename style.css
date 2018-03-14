@@ -594,6 +594,10 @@ svg.breadcrumbs-arrow {
 	padding: 0 10px;
 }
 
+.die-beliebtesten-artikel-read-more {
+	padding-top: 10px;
+}
+
 .osterreichs-nr-1 {
 	margin: 50px 0;
 }
@@ -664,14 +668,13 @@ img {max-width:100%;}
 .aside-social-links-container {
 	background-color: #EEEEEE;
 	display: flex;
-	
-
+	justify-content: space-around;
 	padding: 10px 0;
 }
 
 .aside-social-links-container img {
 	border-radius: 50%;
-	margin: 0 2px;
+	width: 80px; height: 80px;
 }
 
 .unsere-kunden-header {
