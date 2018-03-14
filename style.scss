@@ -57,7 +57,7 @@ $line-height: 1;
 %rounded-button {
 	@extend %medium-font;
 	border-radius: 12px;
-	padding: 0.2rem 1.5rem;
+	padding: 2px 1.5rem;
 }
 
 //
@@ -119,9 +119,6 @@ figcaption {
 	span {
 		border-bottom: 2px solid $yellow;
 	}
-}
-.social-media-links-container {
-	display: none;
 }
 .header-container {
 	@extend %small-font;
@@ -395,5 +392,401 @@ figcaption {
 	}
 }
 @media screen and (min-width: $break-desktop-1) {
-	
+	html {
+		font-size: 12px;
+	}
+	.mobile-narrow {
+		margin-left: 0; margin-right: 0;
+	}
+	.no-mobile {
+		display: block;
+	}
+	span.no-mobile {
+		display: inline;
+	}
+	.outer-container {
+	    display: flex;
+	    justify-content: center;
+	}
+	.inner-container {
+	    max-width: 1920px;
+	    display: flex;
+	    flex-wrap: wrap;
+	}
+	.aside-left, .aside-right {
+		display: block;
+	    flex: 1;
+	}
+	main {
+	    flex: 10;
+	}
+	.rounded-button {
+		span {
+			font-size: 1.4rem;
+		}
+	}
+	.desktop-narrow {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.social-media-links-container {
+	    padding-top: 25rem;
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    svg {
+	    	width: 1.7rem; height: 1.7rem;
+	    }
+	    > div {
+			align-items: center;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			margin-bottom: 1rem;
+			height: 3.5rem;
+			width: 3.5rem;
+		}
+	    .fb {
+			background-color: #3b5998;
+			fill: #fff;
+		}
+		.instagram {
+			background-color: #3b5998;
+			fill: #fff;
+			background: #f09433; 
+			background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+			background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+			background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+		}
+		.youtube {
+			background-color: #CE1312;
+			fill: #fff;
+		}
+		.envelope {
+			background-color: #52565E;
+			fill: #fff;
+		}
+		hr {
+			color: $light-grey-3;
+			margin: 3rem 0;
+			width: 3.5rem;
+		}
+		.printer {
+			background-color: #FFCC01;
+			fill: #000;
+		}
+	}
+	.header-container {
+		margin-left: 6rem;
+		.article-top-info {
+			justify-content: flex-start;
+			img {
+				width: 2rem; height: 2rem;
+			}
+			img, svg {
+				margin: 0;
+				margin-right: 0.5rem;
+			}
+			span {
+				margin: 0;
+				margin-right: 1.5rem;
+			}
+			> div:nth-child(1) > div {
+				flex-direction: row;
+				align-items: center;
+			}
+			> div:nth-child(2) {
+			    flex-direction: row;
+			    > div {
+			    	flex-direction: row;
+			    	span {
+			    		order: 2;
+			    	}
+			    	svg {
+			    		order: 1;
+			    	}
+			    }
+			}
+		}
+	}
+	.main-content-container {
+		display: flex;
+	}
+	.main-content {
+	    max-width: 1240px;
+	    flex: 8;
+	}
+	.vertical-line {
+		display: block;
+	    margin: 0 50px;
+	    border-left: 2px solid $light-grey-2;
+	}
+	.aside {
+	    text-align: center;
+	    flex: 3;
+	}
+	.main-article {
+		div {
+			div {
+				font-size: 10rem;
+			}
+			span {
+	    		margin-left: 4rem;
+	    		margin-right: 4rem;
+	    	}
+	    }
+	}
+	.about-author {
+		.about-author-tags {
+			border-radius: 4px 4px 0 0;
+		}
+		.about-author-main {
+			img {
+				width: 15rem; height: 15rem;
+				margin-right: 5rem;
+			}
+			.about-author-text {
+				width: 50%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+		}
+	}
+	.you-might-also-like-items {
+		display: flex;
+		justify-content: space-between;
+		.you-might-also-like-item {
+			width: 49%;
+			position: relative;
+			padding-bottom: 9rem;
+			.you-might-also-like-bottom {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+			}
+		}
+	}
+	.aside {
+		.spannende-news-aus-u {
+			margin: 5rem 0;
+		}
+		.alle-kategorien-button {
+			border-bottom: 1px solid $light-grey-2;
+			padding-bottom: 2rem;
+			span {
+				background-color: $yellow;
+			}
+		}
+		.aside-button-group {
+		    display: flex;
+		    flex-wrap: wrap;
+		    justify-content: center;
+		    padding-top: 2rem;
+		    div {
+		    	padding: 0.5rem 0.5rem;
+		    }
+		    span {
+		    	background-color: $yellow;
+		    }
+		}
+		.aside-second-header {
+		    margin: 5rem 0;
+		}
+		.die-beliebtesten-artikel-container {
+	    	text-align: left;
+	    	.die-beliebtesten-artikel-item {
+			    border-bottom: 1px solid $light-grey-2;
+			    display: flex;
+			    padding: 2rem 0;
+			    .die-beliebtesten-artikel-img-container {
+				    margin-right: 2rem;
+				    flex: 1;
+				    img {
+				    	border-radius: 4px;
+				    }
+				}
+				.die-beliebtesten-artikel-desc {
+				    flex: 3;
+				    display: flex;
+				    flex-direction: column;
+				    align-items: left;
+				    justify-content: space-around;
+				    .die-beliebtesten-artikel-text {
+				    	font-size: 1.8rem;
+				    }
+				    .die-beliebtesten-artikel-read-more {
+				    	span {
+				    		background-color: $yellow;
+				    	}
+				    }
+				}
+			}
+		}
+		.osterreichs-nr-1 {
+			margin: 5rem 0;
+			.osterreichs-nr-1-header {
+			    align-items: center;
+			    background-color: $text-grey;
+			    border-radius: 4px 4px 0 0;
+			    color: $light-grey-5;
+			    display: flex;
+			    justify-content: center;
+			    .osterreichs-nr-1-header-top {
+				    font-size: 3rem;
+				    line-height: 4rem;
+				}
+				.osterreichs-nr-1-header-bottom {
+				    font-size: 2.5rem;
+				    line-height: 3rem;
+				}
+				.osterreichs-nr-1-header-number-one {
+				    font-size: 8rem;
+				    font-weight: bold;
+				    line-height: 9.5rem;
+				}
+			}
+			.osterreichs-nr-1-icons-container {
+			    background-color: $light-grey-5;
+			    padding: 2rem 0;
+			    .osterreichs-nr-1-icon-item {
+				    display: flex;
+				    align-items: center;
+				    justify-content: center;
+				    padding: 1rem;
+				    svg {
+				    	width: 2.8rem; height: 2.8rem;
+				    	margin-right: 1rem;
+				    }
+				}
+			}
+			.osterreich-nr-1-mehr-erfahren {
+			    background-color: $yellow;
+			    font-weight: 600;
+			    padding: 1rem 0;
+			    width: 100%;
+			}
+		}
+		.aside-social-links-header {
+			margin-bottom: 2rem;
+		}
+		.aside-social-links-container {
+		    background-color: $light-grey-5;
+		    display: flex;
+		    justify-content: space-around;
+		    padding: 1rem 0;
+		    > div {
+			    margin: 0 0.4rem;
+			}
+			img {
+			    border-radius: 50%;
+			    max-width: 80px;
+			    max-height: 80px;
+			}
+		}
+		.unsere-kunden {
+			.unsere-kunden-header {
+				margin: 3rem 0;
+			}
+			.unsere-kunden-images {
+				> div {
+				    display: flex;
+				    > div {
+					    margin: 4px 2px 0 2px;
+					    img {
+					    	height: 100%;
+					    }
+					}
+				}
+			}
+		}
+		.kunde-detail {
+		    background-color: $light-grey-5;
+		    margin-top: 0.2rem;
+		    text-align: left;
+		    .kunde-detail-desc {
+			    display: flex;
+			    align-items: center;
+			    justify-content: center;
+			    padding: 2rem;
+			    font-size: 1.4rem;
+			    line-height: 1.6rem;
+			    img {
+				    border-radius: 50%;
+				    margin-right: 2rem;
+				    width: 5rem;
+				    height: 5rem;
+				}
+				.kunde-detail {
+				    text-align: left;
+				    kunde-detail-text-function {
+				    	font-size: 1.3rem;
+				    }
+				}
+			}
+			hr {
+			    color: $light-grey-4;
+			    margin: 0 auto;
+			    width: 80%;
+			}
+			.kunde-detail-quote {
+			    align-items: center;
+			    display: flex;
+			    font-weight: 300;
+			    margin: 2rem 0;
+			    text-align: center;
+			    .kunde-detail-quote-marks {
+				    color: $yellow;
+				    font-size: 5rem;
+				    font-weight: bold;
+				}
+				span {
+					margin: 0 2rem;
+				}
+			}
+			.kunde-detail-mehr-erfahren {
+			    background-color: $yellow;
+			    font-weight: 600;
+			    padding: 1rem 0;
+			    text-align: center;
+			}
+		}
+		.aside-instagram {
+			.aside-instagram-header {
+			    margin: 4rem 0 2.5rem 0;
+			}
+			.aside-instagram-images > div {
+			    display: flex;
+			    > div {
+				    margin: 4px 2px 0 2px;
+				    img {
+					    height: 100%;
+					    flex: auto;
+					}
+				}
+			}
+			.aside-instagram-folge-uns {
+			    background-color: $yellow;
+			    font-weight: 600;
+			    padding: 1rem 0;
+			    text-align: center;
+			}
+		}
+	}
+	.comment-section-outer-container {
+	    margin-top: 100px;
+	    display: flex;
+	    .comment-section-main {
+		    width: 45%;
+		    margin-left: 12%;
+		    padding: 5rem 0;
+		}
+		.comment-input-form {
+			.name, .email {
+				width: 49%;
+			}
+		}
+	}
 }
