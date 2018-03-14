@@ -693,7 +693,7 @@ img {max-width:100%;}
 	flex-wrap: wrap;
 }
 
-.unsere-kunden-images img {
+.unsere-kunden-images > div {
 	width: 50%;
 }
 
