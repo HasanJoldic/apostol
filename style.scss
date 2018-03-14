@@ -790,3 +790,41 @@ figcaption {
 		}
 	}
 }
+@media only screen and (max-width: 1650px) {
+	.aside-right {
+		flex: 0 0 2rem;
+	}
+}
+@media only screen and (min-width: 1241px) and (max-width: 1650px) {
+	.comment-section-main {
+		margin-left: 5rem;
+		width: 60%;
+	}
+}@media only screen and (min-width: 1025px) and (max-width: 1240px) {
+	html {
+		font-size: 10px;
+	}
+	.social-media-links-container {
+		display: none;
+	}
+	.aside-left {
+		flex: unset;
+		width: 5rem;
+	}
+	.comment-section-main {
+		margin-left: 5rem;
+		width: 80%;
+	}
+}
+@media only screen and (min-width: 1025px) and (max-width: 1650px) {
+	.die-beliebtesten-artikel-text {
+		font-size: 1.5rem;
+		line-height: 1.8rem;
+	}
+}
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+   /* IE10+ specific styles go here */  
+   .no-ie11 {
+		display: none !important;
+	}
+}
