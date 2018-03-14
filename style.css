@@ -993,6 +993,10 @@ figcaption: {
 		font-size: unset;
 	}
 
+	main .header-container > div {
+		margin: 0 15px;
+	}
+
 	.no-mobile {
 		display: none;
 	}
