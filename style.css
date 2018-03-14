@@ -10,7 +10,8 @@ body {
 }
 
 .outer-container {
-	display: flex; justify-content: center;
+	display: flex; 
+	justify-content: center;
 }
 
 .inner-container {
@@ -32,19 +33,12 @@ main {
 	display: flex;
 }
 
-h2 {
-	font-size: 32px;
-	font-weight: normal;
-	line-height: 32px;
-}
-
 svg {
 	height: 16px;
 	width: 16px;
 }
 
-strong,
-h1, h2, h3, h4 {
+strong {
 	font-weight: 600;
 }
 
@@ -52,9 +46,6 @@ img {
 	width: 100%;
 }
 
-.flex-row {
-	display: flex; align-items: center;
-}
 
 .main-content {
 	max-width: 1240px;
@@ -71,20 +62,10 @@ img {
 
 }
 
-.main-content-main-image {
-	width: 100%;
-}
 
+/* */
 figcaption {
 	font-size: 16px;
-}
-
-.main-article-grid {
-
-}
-
-.secondary-article-grid {
-
 }
 
 .article-content {
@@ -92,8 +73,6 @@ figcaption {
 	line-height: 32px;
 }
 
-.main-article {
-}
 
 .main-article-quote {
 	align-items: center;
@@ -120,14 +99,8 @@ figcaption {
 }
 
 .two-images-container figure {
-	margin: 30px 5px;
-}
-
-.two-images-container img {
-	width: 100%;
-}
-
-.strassburger-jahre-header {	
+	margin: 30px 0;
+	width: 49%;
 }
 
 .unsere-neuen-streuar-header {
@@ -136,8 +109,6 @@ figcaption {
 
 .unsere-neuen-streuar-img-container {
 	display: flex;
-	
-
 }
 
 .unsere-neuen-streuar-img-container > div {
@@ -171,11 +142,8 @@ figcaption {
 }
 
 .about-author img {
-	border-radius: 100%;
+	border-radius: 50%;
 	margin-right: 50px;
-}
-
-.about-author-text {
 }
 
 .about-author-name {
@@ -194,9 +162,6 @@ figcaption {
 	padding: 3px 20px;
 }
 
-.page-content-grid {
-	display: flex;
-}
 
 .show-comments {
 	text-align: center;
@@ -219,7 +184,6 @@ figcaption {
 }
 
 .you-might-also-like-items {
-	 
 	display: flex;
 	justify-content: space-between;
 }
@@ -251,15 +215,6 @@ figcaption {
 	line-height: 32px;
 	text-align: center;
 	text-transform: uppercase;
-}
-
-.you-might-also-like-imgs-container,
-.you-might-also-like-img-captions-container,
-.you-might-also-like-links-container,
-.you-might-also-like-authors-container {
-	
-
-	
 }
 
 .you-might-also-like-links-container > div {
@@ -295,16 +250,10 @@ figcaption {
 	margin: 20px 0;
 }
 
-.you-might-also-like-links-container {
-
-}
-
 .you-might-also-like-author-container {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 20px;
-	
-	
 }
 
 .you-might-also-like-author-container > div:first-child {
@@ -341,30 +290,6 @@ figcaption {
 	text-align: right;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.header-container {
-	width: 100%;
-}
-
 .header-container svg {
 	height: 16px;
 	width: 16px;
@@ -384,10 +309,6 @@ figcaption {
 	margin-right: 10px;
 }
 
-svg.breadcrumbs-arrow {
-	height: 10px;
-	width: 10px
-}
 
 .main-header {
 	font-size: 48px;
@@ -399,6 +320,11 @@ svg.breadcrumbs-arrow {
 
 .article-top-info {
 	margin-bottom: 50px;
+	display: flex; align-items: center;
+}
+
+.article-top-info > div {
+	display: flex; align-items: center;
 }
 
 .article-top-info img,
@@ -424,10 +350,10 @@ svg.breadcrumbs-arrow {
 
 
 .social-media-links-container {
-	align-items: center;
-	/*display: flex;
-	flex-direction: column;*/
 	padding-top: 250px;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .social-media-links-container > div {
@@ -556,8 +482,6 @@ svg.breadcrumbs-arrow {
 .die-beliebtesten-artikel-item {
 	border-bottom: 1px solid #979797;
 	display: flex;
-
-	
 	padding: 20px 0;
 }
 
@@ -654,8 +578,6 @@ svg.breadcrumbs-arrow {
 	margin-bottom: 20px;
 }
 
-img {max-width:100%;}
-
 .aside-social-links-header span {
 	border-bottom: 1px solid #FFCC01;
 	color: #292929;
@@ -694,9 +616,6 @@ img {max-width:100%;}
 	letter-spacing: 2px;
 	line-height: 32px;
 	text-transform: uppercase;
-}
-
-.unsere-kunden-images {
 }
 
 .unsere-kunden-images > div {
@@ -779,9 +698,6 @@ img {max-width:100%;}
 	text-transform: uppercase;
 }
 
-.aside-instagram-images {
-}
-
 .aside-instagram-images > div {
 	display: flex;
 }
@@ -806,14 +722,6 @@ img {max-width:100%;}
 	background-color: #EEEEEE;
 	margin-top: 100px;
 	display: flex;
-
-	
-	
-}
-
-.comment-section-inner-container {
-
-	
 }
 
 .comment-section-main {
@@ -937,8 +845,6 @@ img {max-width:100%;}
 
 .comment-input-form textarea,
 .comment-input-form .submit-comment {
-
-
 	margin-top: 20px;
 }
 
@@ -1090,12 +996,6 @@ figcaption: {
 	    font-size: 80px;
 	}
 
-	.two-images-container {
-	    
-	    
-	   
-	}
-
 	.two-images-container figure {
 		margin: 30px 0;
 		width: 49%;
@@ -1109,13 +1009,9 @@ figcaption: {
 		display: flex; align-items: center;
 	}
 
-	.about-author-main {
-	    
-	    padding: 30px 0;
-	    
-	   
+	.about-author-main {    
+	    padding: 30px 0;  
 	}
-
 
 	.you-might-also-like-item {
 		margin-bottom: 50px;
@@ -1125,18 +1021,6 @@ figcaption: {
 		background-color: #EEE;
 		padding-left: 15px;
 		padding-right: 15px;
-	}
-
-	.comment-input-form {
-		
-		
-	
-		grid-row-gap: 10px;
-	}
-
-	.comment-input-form > * {
-	
-	
 	}
 
 	.about-author-img-container {
@@ -1200,7 +1084,6 @@ figcaption: {
 		flex: unset;
 		width: 50px;
 	}
-
 
 	.comment-section-main {
 		margin-left: 50px;

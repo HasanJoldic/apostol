@@ -1,0 +1,382 @@
+$yellow: #FFCC01;
+$red: #D8232A;
+$text-grey: #292929;
+$dark-grey: #666;
+$light-grey-1: #666;
+$light-grey-2: #979797;
+$light-grey-3: #CCC;
+$light-grey-4: #E0E0E0; 
+$light-grey-5: #EEE;
+$link-blue: #009FFF;
+
+$font-size: 10px;
+$line-height: 1;
+
+%flex-center {
+	display: flex;
+	justify-content: center;
+}
+
+
+%main-font {
+	font-size: 1.8rem;
+	line-height: 2.4rem;
+}
+%medium-font {
+	font-size: 1.6rem;
+	line-height: 2rem;
+}
+%small-font {
+	font-size: 1.4rem;
+	line-height: 1.8rem; 
+}
+%main-header-font {
+	font-size: 2rem;
+	line-height: 3.2rem; 
+}
+%big-header-font {
+	font-size: 3.2rem;
+	line-height: 3.2rem; 
+}
+%quotes-font {
+	font-size: 2.4rem;
+	line-height: 3.2rem; 
+	font-weight: 300;
+	text-align: center;
+}
+%quote-marks-font {
+	color: $yellow;
+	font-size: 8rem;
+	line-height: 4.8rem; 
+}
+
+%rounded-button {
+	@extend %medium-font;
+	border-radius: 12px;
+	padding: 0.2rem 1.5rem;
+}
+
+//
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	color: $text-grey;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: $font-size;
+	line-height: $line-height;
+}
+body {
+	@extend %main-font;
+}
+strong {
+	font-weight: 600;
+}
+img {
+	width: 100%;
+}
+input, textarea {
+	box-sizing: border-box;
+}
+
+//
+h1 {
+	@extend %big-header-font;
+	font-weight: 600;
+}
+h2 {
+	@extend %main-header-font;
+	font-weight: 600;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+svg {
+	width: 1.4rem;
+	height: 1.4rem;	
+}
+figcaption {
+	@extend %small-font;
+}
+.no-mobile {
+	display: none;
+}
+.mobile-narrow {
+	margin: 0 1.5rem;
+}
+.rounded-button span {
+	@extend %rounded-button;
+}
+.yellow-underline-header {
+	font-weight: 600;
+	text-align: center;
+	text-transform: uppercase;
+	span {
+		border-bottom: 2px solid $yellow;
+	}
+}
+.social-media-links-container {
+	display: none;
+}
+.header-container {
+	@extend %small-font;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+.breadcrumbs {
+	display: flex;
+	align-items: center;
+	svg {
+		width: 1rem; height: 1rem;
+		fill: $red;
+	}
+	svg:nth-child(1) {
+		width: 1.6rem; height: 1.6rem;
+	}
+	svg, span {
+		margin-right: 1rem;
+	}
+}
+.article-top-info {
+	display: flex; 
+	justify-content: space-between;
+	align-items: center;
+
+	> div {
+		display: flex; 
+		align-items: center;
+	}
+	svg {
+		fill: $light-grey-1;
+		margin-left: 1rem;
+	}
+	img {
+		width: 4rem; height: 4rem;
+		border-radius: 50%;
+		margin-right: 1rem;
+	}
+	> div:nth-child(1) {
+		> div {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	> div:nth-child(2) {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		> div {
+			display: flex;
+			align-items: center;
+		}
+	}
+}
+.main-content {
+	margin-bottom: 12rem;
+}
+.main-article {
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+	div {
+		display: flex;
+		align-items: center;
+		div {
+			@extend %quote-marks-font;
+		}
+		span {
+			@extend %quotes-font;
+			margin-left: 0.5rem;
+			margin-right: 0.5rem;
+		}
+	}
+}
+.two-img-container {
+	display: flex;
+	justify-content: space-between;
+	figure {
+		width: 49%;
+		figcaption {
+			font-size: 1.2rem;
+			line-height: 1.5rem;
+		}
+	}
+}
+.unsere-neuen-streuar {
+	> div {
+		display: flex;
+		div {
+			margin-left: 0.1rem;
+			margin-right: 0.1rem;
+		}
+	}
+}
+.about-author {
+	border-bottom: 1px solid $light-grey-2;
+	.about-author-tags {
+		@extend %small-font;
+		color: #FFF;
+		background-color: $light-grey-1;
+		border-radius: 4px;
+		padding: 1rem 4rem;
+		svg {
+			fill: #FFF;
+			margin-right: 2rem;
+		}
+		> div {
+			display: flex;
+			align-items: center;
+		}
+	}
+	.about-author-main {
+		@extend %small-font;
+		display: flex;
+		padding: 5rem 0;
+		img {
+			width: 8rem; height: 8rem;
+			border-radius: 50%;
+			margin-right: 1rem;
+		}
+		.about-author-name {
+			@extend %main-font;
+			font-weight: 600;
+		}
+		.about-author-desc {
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+		}
+		.about-author-button {
+			span {
+				background-color: $yellow;
+			}
+		}
+	}
+}
+.show-comments-button {
+	margin-top: 4rem;
+	margin-bottom: 8rem;
+	text-align: center;
+	span {
+		background-color: $light-grey-4;
+	}
+}
+.you-might-also-like {
+	.you-might-also-like-item {
+		margin-top: 4rem;
+	}
+	.you-might-also-like-read-button {
+		position: relative;
+		text-align: center;
+		margin-bottom: 2rem;
+		hr {
+			position: absolute;
+			width: 100%;
+			z-index: -1;
+			top: 50%;
+			margin-top: 1px;
+		}
+		span {
+			@extend %rounded-button;
+			background-color: $yellow;
+		}
+	}
+	.you-might-also-like-author {
+		@extend %small-font;
+		color: $light-grey-2;
+		display: flex;
+		justify-content: space-between;
+		svg {
+			fill: $light-grey-2;
+		}
+		> div:nth-child(1) {
+			display: flex;
+			img {
+				border-radius: 500%;
+				width: 4rem; height: 4rem;			
+				margin-right: 2rem;
+			}
+			div {
+
+			}
+		}
+	}
+}
+.comment-section-outer-container {
+	background-color: $light-grey-5;
+	.comment-section-main {
+		padding: 5rem 0;
+		.comments-header-container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.comments-header {
+				@extend %main-header-font;
+			}
+			.comments-header-button {
+				span {
+					background-color: $light-grey-3;
+					padding: 1px 10px;
+				}
+			}
+		}
+		.single-comment {
+			border-bottom: 1px solid #CCCCCC;
+			padding: 3rem 0;
+			.single-comment-header {
+				@extend %small-font;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-bottom: 2rem;
+				svg {
+					margin-right: 0.5rem;
+				}
+				div {
+					display: flex;
+					align-items: center;
+				}
+			}
+			a {
+				color: $link-blue;
+				text-decoration: none;
+			}
+		}
+		.weitere-komentare-anzeigen-button {
+			margin-top: 4rem; margin-bottom: 4rem;
+			text-align: center;
+			span {
+				background-color: $yellow;
+			}
+		}
+	}
+}
+.comment-input-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 4rem;
+	input {
+	}
+	input, textarea {
+		border: none;
+		border-bottom: 2px solid black;
+		background-repeat: no-repeat; background-size: 2rem 2rem; background-position: 1rem 1rem;
+		margin-bottom: 1.4rem;
+		padding: 1rem 5rem;
+		width: 100%;
+	}
+	.name {
+		background-image: url(./images/svg/user-alt.svg);
+	}
+	.email {
+    	background-image: url(./images/svg/at.svg);
+	}
+	textarea {
+    	background-image: url(./images/svg/comment.svg);
+	}
+	.submit-comment {
+		background-color: $yellow;
+		border: none;
+		font-weight: 600;
+	}
+}
