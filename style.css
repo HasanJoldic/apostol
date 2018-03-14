@@ -689,12 +689,18 @@ img {max-width:100%;}
 }
 
 .unsere-kunden-images {
-	display: flex;
-	flex-wrap: wrap;
 }
 
 .unsere-kunden-images > div {
-	width: 50%;
+	display: flex;
+}
+
+.unsere-kunden-images > div > div {
+    margin: 4px 2px 0 2px;
+}
+
+.unsere-kunden-images img {
+	height: 100%;
 }
 
 .kunde-detail {
