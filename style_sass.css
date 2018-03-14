@@ -177,6 +177,12 @@ svg {
     .about-author .about-author-main .about-author-desc {
       margin-top: 1rem;
       margin-bottom: 1rem; }
+    @media screen and (max-width: 380px) {
+      .about-author .about-author-main .about-author-button span {
+        font-size: 1.4rem; } }
+    @media screen and (max-width: 340px) {
+      .about-author .about-author-main .about-author-button span {
+        font-size: 1.2rem; } }
     .about-author .about-author-main .about-author-button span {
       background-color: #FFCC01; }
 

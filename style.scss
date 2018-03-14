@@ -1,3 +1,6 @@
+$break-phone-1: 340px;
+$break-phone-2: 380px;
+
 $yellow: #FFCC01;
 $red: #D8232A;
 $text-grey: #292929;
@@ -246,6 +249,16 @@ figcaption {
 			margin-bottom: 1rem;
 		}
 		.about-author-button {
+			@media screen and (max-width: $break-phone-2) {
+				span {
+					font-size: 1.4rem;
+				}
+			}
+			@media screen and (max-width: $break-phone-1) {
+				span {
+					font-size: 1.2rem;
+				}
+			}
 			span {
 				background-color: $yellow;
 			}
@@ -380,3 +393,4 @@ figcaption {
 		font-weight: 600;
 	}
 }
+
