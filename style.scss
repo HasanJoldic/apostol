@@ -3,6 +3,7 @@ $break-phone-2: 380px;
 $break-desktop-1: 1024px;
 
 $yellow: #FFCC01;
+$light-yellow: lighten($yellow, 20%);
 $red: #D8232A;
 $text-grey: #292929;
 $dark-grey: #666;
@@ -58,6 +59,16 @@ $line-height: 1;
 	@extend %medium-font;
 	border-radius: 12px;
 	padding: 2px 1.5rem;
+}
+.button {
+	cursor: pointer;
+	cursor: hand;
+}
+.button.button-yellow:hover {
+	background-color: $light-yellow !important;
+}
+.button.button-grey:hover {
+	background-color: $light-grey-2 !important;
 }
 
 //
@@ -447,10 +458,18 @@ figcaption {
 			height: 3.5rem;
 			width: 3.5rem;
 		}
+		$fb-color: #3b5998;
 	    .fb {
-			background-color: #3b5998;
+			background-color: $fb-color;
 			fill: #fff;
 		}
+		.fb:hover {
+			background-color: lighten($fb-color, 20%) !important;
+			svg {
+				background-color: lighten($fb-color, 20%) !important;
+			}
+		}
+		$instagram-color: #3b5998;
 		.instagram {
 			background-color: #3b5998;
 			fill: #fff;
@@ -460,22 +479,49 @@ figcaption {
 			background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
 		}
+		.instagram:hover {
+			background: lighten($instagram-color, 20%) !important;
+			svg {
+				background: lighten($instagram-color, 20%) !important;
+			}
+		}
+		$youtube-color: #CE1312;
 		.youtube {
 			background-color: #CE1312;
 			fill: #fff;
 		}
+		.youtube:hover {
+			background-color: lighten($youtube-color, 20%) !important;
+			svg {
+				background-color: lighten($youtube-color, 20%) !important;
+			}
+		}
+		$envelope-color: #52565E;
 		.envelope {
 			background-color: #52565E;
 			fill: #fff;
+		}
+		.envelope:hover {
+			background-color: lighten($envelope-color, 20%) !important;
+			svg {
+				background-color: lighten($envelope-color, 20%) !important;
+			}
 		}
 		hr {
 			color: $light-grey-3;
 			margin: 3rem 0;
 			width: 3.5rem;
 		}
+		$printer-color: $yellow;
 		.printer {
 			background-color: #FFCC01;
 			fill: #000;
+		}
+		.printer:hover {
+			background-color: lighten($printer-color, 20%) !important;
+			svg {
+				background-color: lighten($printer-color, 20%) !important;
+			}
 		}
 	}
 	.header-container {
@@ -800,7 +846,8 @@ figcaption {
 		margin-left: 5rem;
 		width: 60%;
 	}
-}@media only screen and (min-width: 1025px) and (max-width: 1240px) {
+}
+@media only screen and (min-width: 1025px) and (max-width: 1240px) {
 	html {
 		font-size: 10px;
 	}

@@ -33,6 +33,16 @@ h1 {
   border-radius: 12px;
   padding: 2px 1.5rem; }
 
+.button {
+  cursor: pointer;
+  cursor: hand; }
+
+.button.button-yellow:hover {
+  background-color: #ffe067 !important; }
+
+.button.button-grey:hover {
+  background-color: #979797 !important; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -334,6 +344,10 @@ svg {
     .social-media-links-container .fb {
       background-color: #3b5998;
       fill: #fff; }
+    .social-media-links-container .fb:hover {
+      background-color: #718dc8 !important; }
+      .social-media-links-container .fb:hover svg {
+        background-color: #718dc8 !important; }
     .social-media-links-container .instagram {
       background-color: #3b5998;
       fill: #fff;
@@ -342,12 +356,24 @@ svg {
       background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
       background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 ); }
+    .social-media-links-container .instagram:hover {
+      background: #718dc8 !important; }
+      .social-media-links-container .instagram:hover svg {
+        background: #718dc8 !important; }
     .social-media-links-container .youtube {
       background-color: #CE1312;
       fill: #fff; }
+    .social-media-links-container .youtube:hover {
+      background-color: #f05756 !important; }
+      .social-media-links-container .youtube:hover svg {
+        background-color: #f05756 !important; }
     .social-media-links-container .envelope {
       background-color: #52565E;
       fill: #fff; }
+    .social-media-links-container .envelope:hover {
+      background-color: #838893 !important; }
+      .social-media-links-container .envelope:hover svg {
+        background-color: #838893 !important; }
     .social-media-links-container hr {
       color: #CCC;
       margin: 3rem 0;
@@ -355,6 +381,10 @@ svg {
     .social-media-links-container .printer {
       background-color: #FFCC01;
       fill: #000; }
+    .social-media-links-container .printer:hover {
+      background-color: #ffe067 !important; }
+      .social-media-links-container .printer:hover svg {
+        background-color: #ffe067 !important; }
 
   .header-container {
     margin-left: 6rem; }
