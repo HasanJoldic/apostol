@@ -752,6 +752,9 @@ figcaption {
 		    background-color: $light-grey-5;
 		    margin-top: 0.2rem;
 		    text-align: left;
+		    width: calc(100% - 4px);
+		    margin-left: auto;
+		    margin-right: auto;
 		    .kunde-detail-desc {
 			    display: flex;
 			    align-items: center;
@@ -818,6 +821,9 @@ figcaption {
 			    font-weight: 600;
 			    padding: 1rem 0;
 			    text-align: center;
+			    width: calc(100% - 4px);
+			    margin-left: auto;
+			    margin-right: auto;
 			}
 		}
 	}
