@@ -338,7 +338,8 @@ svg {
       border-radius: 50%;
       display: flex;
       justify-content: center;
-      margin-bottom: 1rem;
+      margin-bottom: 1rem; }
+    .social-media-links-container .button {
       height: 3.5rem;
       width: 3.5rem; }
     .social-media-links-container .fb {
